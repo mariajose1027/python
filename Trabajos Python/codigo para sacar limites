@@ -1,0 +1,12 @@
+from sympy import Symbol, Limit
+
+x = Symbol('x')
+funcion = input("Introduce la función: ")
+
+# Creamos una expresión simbólica de la función introducida por el usuario
+expresion = eval(funcion)
+
+# Calculamos el límite de la función utilizando la regla de L'Hôpital
+limite = Limit(expresion, x, 0).doit()
+
+print("El límite de la función {} cuando x tiende a 0 es: {}".format(funcion, limite))
